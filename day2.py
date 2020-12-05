@@ -22,7 +22,6 @@ def validate_password2( password, letter, low, high ):
     a = password[low - 1]
     b = password[high - 1]
 
-    print( password, letter, low, high, a,b)
     if a == letter and b == letter:
         return False
     if a == letter or b == letter:
