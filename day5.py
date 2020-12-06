@@ -8,8 +8,6 @@
 # Part 1 was simple
 # Part 2 - found the seat quickly but did not submit the ID, thought the challenge was to find the encoded seat which distracted me for 20 minutes.
 
-import re
-
 def find_seat( seat ):
     low = 0
     high = 128
