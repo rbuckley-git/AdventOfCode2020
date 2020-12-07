@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 #
 # https://adventofcode.com/
-# 4/12/2020
+# 7/12/2020
 #
-# Day 4
+# Day 7
 #
 # Challenge was just knowing the direction in which to naviate the map created during the file parse.
 # First part involved building a set and counting the entries.
