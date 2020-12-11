@@ -10,8 +10,6 @@
 # The logic behind this puzzle is quite amazing.
 #
 
-import copy
-
 # Seat map has following identifiers
 #    L = empty
 #    # = occupied
@@ -91,8 +89,8 @@ def set_seat( data, x, y, value):
 # solving both parts involves the same logic with some parameters, here the count function is passed in as a parameter along with the tolerence factor
 def solve( data, count_fn, tolerence ):
     while True:
-        new_data = copy.deepcopy( data ) 
-        print_seats( new_data )
+        new_data = data.copy()
+        #print_seats( new_data )
         for x in range(len(data[0])):
             for y in range(len(data)):
                 count = count_fn( data ,x, y)
@@ -121,6 +119,6 @@ if __name__ == "__main__":
         for line in fp:
             data.append(  line[:-1] )
 
-    print("Part 1:",  solve( copy.deepcopy( data ),count_ajacent_seats, 4 ) )
-    print("Part 2:",  solve( copy.deepcopy( data ),count_visible_seats, 5 ) )
+    print("Part 1:",  solve( data,count_ajacent_seats, 4 ) )
+    print("Part 2:",  solve( data,count_visible_seats, 5 ) )
 
